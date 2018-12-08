@@ -1,11 +1,11 @@
-public class Ceasar {
+public class Caesar {
     public static void main(String[] args) {
-        String secretMessage = "abcdefghijklmnopqrstuvwxyz";
+        String secretMessage = "Hello World!";
         Integer key = 3;
-        System.out.println(ceasarMethod(secretMessage, key));
+        System.out.println(caesarMethod("Hello World!", 3));
     }
 
-    private static StringBuilder ceasarMethod(String secretMessage, Integer key) {
+    private static StringBuilder caesarMethod(String secretMessage, Integer key) {
         StringBuilder builder = new StringBuilder();
         char c;
         for (int i = 0; i < secretMessage.length(); i++) {

@@ -10,7 +10,7 @@ class SymmetricDifference {
         SymmetricDifference.getSymmetricDifference(firstArray, secondArray);
     }
 
-    public static void getSymmetricDifference(Integer[] firstArray, Integer[] secondArray) {
+    public static Object[] getSymmetricDifference(Integer[] firstArray, Integer[] secondArray) {
         Set<Integer> symmDiff = new HashSet<Integer>(Arrays.asList(firstArray));
         //this hashset contains all of both arrays
         symmDiff.addAll(Arrays.asList((secondArray)));
@@ -20,6 +20,8 @@ class SymmetricDifference {
         temp.retainAll(Arrays.asList(secondArray));
 
         symmDiff.removeAll(temp);
+        Object[] returnedArray = symmDiff.toArray();
         System.out.println(symmDiff);
+        return returnedArray;
     }
 }
