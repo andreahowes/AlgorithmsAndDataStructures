@@ -28,3 +28,16 @@ results in
 [3, 5, 6, 8, 10]
 ```
 
+
+### RotateArray.java
+
+The rotate array algorithm rotates an array to the right by a given key. 
+```
+Integer[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};            
+int key = 3;                                                     
+System.out.println(Arrays.toString(rotateArray(intArray, key))); 
+```
+results in 
+```
+[8, 9, 10, 1, 2, 3, 4, 5, 6, 7]
+```
