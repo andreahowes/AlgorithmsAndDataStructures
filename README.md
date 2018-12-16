@@ -52,3 +52,13 @@ results in
 ```
 world! entire the to Hello 
 ```
+### BinarySearch.java
+
+Algorithm using a recursive function to efficiently search through an ordered array.
+```
+int IntToSearchFor = 33;
+binarySearch(myArray, IntToSearchFor, myArray.length - 1, 0);
+```
+results in 
+```
+The index of the missing number is: 33
