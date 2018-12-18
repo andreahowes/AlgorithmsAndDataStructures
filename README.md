@@ -62,3 +62,15 @@ binarySearch(myArray, IntToSearchFor, myArray.length - 1, 0);
 results in 
 ```
 The index of the missing number is: 33
+```
+### RepeatingNumbers.java
+
+Utilizes a HashMap to return the only number in an Array that repeats an odd number of times. 
+```
+int[] myArray = {1, 2, 6, 2, 1};
+System.out.println(repeatingNumber(myArray));
+```
+results in 
+```
+6
+```
