@@ -74,3 +74,18 @@ results in
 ```
 6
 ```
+### MultithreadingSearch.java
+
+Utilizes multiple threads to quickly search an array for an integer. 
+```
+int[] myArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+int numberToFind = 10;
+threadCreation(myArray, 2, false, numberToFind);
+```
+results in 
+```
+Thread 1 thread can't find your missing number!
+Found = false
+Thread 2 thread found the number: 10
+Found = true
+```
