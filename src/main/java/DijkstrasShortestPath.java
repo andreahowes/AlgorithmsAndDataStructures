@@ -20,23 +20,37 @@ public class DijkstrasShortestPath {
         graph.addVertex(vertexB);
         graph.addVertex(vertexC);
         graph.addVertex(vertexD);
+
         //find shortest path:
         //method needs to take in graph and the source vertex
         //set the distance of the source vertex as 0
-        //create an empty HashSet of vertices with perminent distances
-        //create HashSet of vertices with NonPerminent distances and add source vertex
-        //while the Hashset of NonPerminent distances is greater than 0:
-            //set currentVertexAlgorithmIsOn to the vertex with shortest distance in NonPerminentDistances
-            //then remove that from the NonPerminent List
-            //then cycle through all neighboringVertices and:
-                // get distance from current vertex
-                // if the neightbor vertex isn't on the PerminentDistance list:
-                    //add to the NonPerminentDistance List
+        //create an empty hashmap of vertices with perminent distances
+        //create hashmap of vertices with NonPerminent distances and add source vertex
+        HashMap<Vertex, Integer> nonPermanentVertices = new HashMap<>();
+        //while the hashmap of NonPerminent distances is greater than 0:
+        //set currentVertexAlgorithmIsOn to the vertex with shortest distance in NonPerminentDistances
+        //then remove that from the NonPerminent List
+        //then cycle through all neighboringVertices and:
+        // get distance from current vertex
+        // if the neightbor vertex isn't on the PerminentDistance list:
+        //add to the NonPerminentDistance List
+        findSmallestDistanceFromNonPerminents(nonPermanentVertices);
 
 
+    }
 
-
-
+    public static Vertex findSmallestDistanceFromNonPerminents(HashMap<Vertex, Integer> nonPermanentVertices) {
+        //method for returning vertex with smallest distance from list of NonPerminent vertices
+        Vertex smallestDistanceVertex = null;
+        int smallestDistance = Integer.MAX_VALUE;
+        for (Vertex vertex : nonPermanentVertices.keySet()) {
+            Integer distance = vertex.getDistance();
+            if (distance < smallestDistance) {
+                smallestDistance = distance;
+                smallestDistanceVertex = vertex;
+            }
+        }
+        return smallestDistanceVertex;
 
     }
 }
@@ -77,8 +91,14 @@ class Vertex {
     private Integer distance;
     //each vertex needs a hashmap of neighboring vertices and their distances
     private Map<Vertex, Integer> neighboringVertices = new HashMap<>();
+
+    //constructor
+    public Vertex(String name) {
+        this.name = name;
+    }
+
     //method to add neighboring vertex and distance to hashMap
-    public void addNeighbor(Vertex vertex, Integer distance){
+    public void addNeighbor(Vertex vertex, Integer distance) {
         neighboringVertices.put(vertex, distance);
     }
 
@@ -88,11 +108,6 @@ class Vertex {
 
     public void setNeighboringVertices(Map<Vertex, Integer> neighboringVertices) {
         this.neighboringVertices = neighboringVertices;
-    }
-
-    //constructor
-    public Vertex(String name) {
-        this.name = name;
     }
 
     //getters, setters needed?
