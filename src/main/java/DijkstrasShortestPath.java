@@ -34,12 +34,12 @@ public class DijkstrasShortestPath {
         // get distance from current vertex
         // if the neightbor vertex isn't on the PerminentDistance list:
         //add to the NonPerminentDistance List
-        findSmallestDistanceFromNonPerminents(nonPermanentVertices);
+        findSmallestDistanceFromNonPermanents(nonPermanentVertices);
 
 
     }
 
-    public static Vertex findSmallestDistanceFromNonPerminents(HashMap<Vertex, Integer> nonPermanentVertices) {
+    public static Vertex findSmallestDistanceFromNonPermanents(HashMap<Vertex, Integer> nonPermanentVertices) {
         //method for returning vertex with smallest distance from list of NonPerminent vertices
         Vertex smallestDistanceVertex = null;
         int smallestDistance = Integer.MAX_VALUE;
