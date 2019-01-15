@@ -21,36 +21,63 @@ public class DijkstrasShortestPath {
         graph.addVertex(vertexC);
         graph.addVertex(vertexD);
 
+
         //find shortest path:
         //method needs to take in graph and the source vertex
         //set the distance of the source vertex as 0
-        //create an empty hashmap of vertices with perminent distances
-        //create hashmap of vertices with NonPerminent distances and add source vertex
-        HashMap<Vertex, Integer> nonPermanentVertices = new HashMap<>();
-        //while the hashmap of NonPerminent distances is greater than 0:
-        //set currentVertexAlgorithmIsOn to the vertex with shortest distance in NonPerminentDistances
-        //then remove that from the NonPerminent List
-        //then cycle through all neighboringVertices and:
-        // get distance from current vertex
-        // if the neightbor vertex isn't on the PerminentDistance list:
-        //add to the NonPerminentDistance List
-        findSmallestDistanceFromNonPermanents(nonPermanentVertices);
 
+        //create an empty hashmap of vertices with permanent distances
+        HashSet<Vertex> permanentDistances = new HashSet<>();
+        //create hashmap of vertices with NonPerminent distances and add source vertex
+        HashSet<Vertex> nonPermanentVertices = new HashSet<>();
+        nonPermanentVertices.add(vertexA);
+        //while the hashmap of NonPerminent distances is greater than 0:
+        while(nonPermanentVertices.size()>0){
+            //set currentVertexAlgorithmIsOn to the vertex with shortest distance in NonPermanentDistances
+            Vertex currentVertex = findSmallestDistanceFromNonPermanents(nonPermanentVertices);
+            //then take currentVertex off nonPermanent list
+            nonPermanentVertices.remove(currentVertex);
+
+            //then cycle through all neighboringVertices and:
+            for(Map.Entry<Vertex, Integer> neighbor: currentVertex.getNeighboringVertices().entrySet()){
+                // get distance from current vertex
+                Vertex currentNeighbor = neighbor.getKey();
+                Integer currentDistance = neighbor.getValue();
+                // if the neightbor vertex isn't on the PermanentDistance list:
+                if(!permanentDistances.contains(currentNeighbor)){
+                    //calculate the min distance between the neighbor and current vertex
+                    calculateShortestDistance(currentNeighbor, currentDistance, currentVertex);
+                    //add to the NonPermanentDistance List
+                    nonPermanentVertices.add(currentNeighbor);
+                }
+
+            }
+            permanentDistances.add(currentVertex);
+        }
 
     }
 
-    public static Vertex findSmallestDistanceFromNonPermanents(HashMap<Vertex, Integer> nonPermanentVertices) {
-        //method for returning vertex with smallest distance from list of NonPerminent vertices
+    private static Vertex findSmallestDistanceFromNonPermanents(Set<Vertex> nonPermanentVertices) {
+        //method for returning vertex with smallest distance from list of NonPermanent vertices
         Vertex smallestDistanceVertex = null;
         int smallestDistance = Integer.MAX_VALUE;
-        for (Vertex vertex : nonPermanentVertices.keySet()) {
-            Integer distance = vertex.getDistance();
+        for (Vertex vertex : nonPermanentVertices) {
+            int distance = vertex.getDistance();
             if (distance < smallestDistance) {
                 smallestDistance = distance;
                 smallestDistanceVertex = vertex;
             }
         }
         return smallestDistanceVertex;
+
+    }
+
+    private static void calculateShortestDistance(Vertex currentNeighbor, Integer currentNeighborDistance, Vertex currentVertex){
+        Integer currentVertexDistance = currentVertex.getDistance();
+        if(currentVertexDistance + currentNeighborDistance<currentNeighbor.getDistance()){
+            currentNeighbor.setDistance(currentVertexDistance + currentNeighborDistance);
+            //DO I NEED TO ADD CODE ABOUT CREATING THE SHORTEST PATH? OR IS THE NUMBER ENOUGH?
+        }
 
     }
 }

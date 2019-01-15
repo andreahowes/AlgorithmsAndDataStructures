@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb6d4c4e-abe2-41e5-a618-6373c1fa3e3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/NumberOfDuplicates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/RepeatingNumbers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/RepeatingNumbers.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DijkstrasShortestPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DijkstrasShortestPath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RepeatingNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RepeatingNumbers.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -57,7 +58,7 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="gradle" value="3" />
-          <entry key="java" value="18" />
+          <entry key="java" value="20" />
           <entry key="md" value="1" />
         </counts>
       </usages-collector>
@@ -65,7 +66,7 @@
         <counts>
           <entry key="Git file" value="1" />
           <entry key="Groovy" value="3" />
-          <entry key="JAVA" value="18" />
+          <entry key="JAVA" value="20" />
           <entry key="Markdown" value="1" />
         </counts>
       </usages-collector>
@@ -73,14 +74,14 @@
         <counts>
           <entry key="dummy" value="6" />
           <entry key="gradle" value="7" />
-          <entry key="java" value="13062" />
+          <entry key="java" value="13955" />
           <entry key="md" value="997" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="7" />
-          <entry key="JAVA" value="13062" />
+          <entry key="JAVA" value="13955" />
           <entry key="Markdown" value="997" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
@@ -89,11 +90,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1395">
+              <first_editor relative-caret-position="302">
                 <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
               </first_editor>
               <second_editor />
@@ -110,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/DijkstrasShortestPath.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="34" />
+            <state relative-caret-position="189">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#839#840#0" expanded="true" />
@@ -150,6 +151,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>HashSet</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -541,8 +547,9 @@
         <option value="$PROJECT_DIR$/src/main/java/Bycrypt.java" />
         <option value="$PROJECT_DIR$/src/main/java/MultithreadingSearch.java" />
         <option value="$PROJECT_DIR$/src/main/java/RepeatingNumbers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DijkstrasShortestPath.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/NumberOfDuplicates.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DijkstrasShortestPath.java" />
       </list>
     </option>
   </component>
@@ -592,7 +599,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547433033515" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547513749966" />
     <property name="extract.method.default.visibility" value="public" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -610,9 +617,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MultithreadingSearch">
+  <component name="RunManager" selected="Application.DijkstrasShortestPath">
     <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BinarySearch" />
+      <module name="algorithms_main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DijkstrasShortestPath" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DijkstrasShortestPath" />
       <module name="algorithms_main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -625,6 +639,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NumberOfDuplicates" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NumberOfDuplicates" />
+      <module name="algorithms_main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RepeatingNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RepeatingNumbers" />
       <module name="algorithms_main" />
@@ -632,34 +653,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReverseWordsInAString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ReverseWordsInAString" />
-      <module name="algorithms_main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RotateArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RotateArray" />
-      <module name="algorithms_main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.RotateArray" />
-      <item itemvalue="Application.ReverseWordsInAString" />
       <item itemvalue="Application.BinarySearch" />
       <item itemvalue="Application.RepeatingNumbers" />
       <item itemvalue="Application.MultithreadingSearch" />
+      <item itemvalue="Application.NumberOfDuplicates" />
+      <item itemvalue="Application.DijkstrasShortestPath" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DijkstrasShortestPath" />
+        <item itemvalue="Application.NumberOfDuplicates" />
         <item itemvalue="Application.MultithreadingSearch" />
         <item itemvalue="Application.RepeatingNumbers" />
         <item itemvalue="Application.BinarySearch" />
-        <item itemvalue="Application.ReverseWordsInAString" />
-        <item itemvalue="Application.RotateArray" />
       </list>
     </recent_temporary>
   </component>
@@ -678,9 +685,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="839" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27110156" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27110156" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -692,13 +698,13 @@
       <window_info id="Job Explorer" order="9" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32971507" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20430107" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39891452" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20348059" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39759037" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32797858" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32797858" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.3283582" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3283582" />
@@ -717,6 +723,18 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DijkstrasShortestPath.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -747,13 +765,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Bycrypt.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/ReverseWordsInAString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="64" lean-forward="true" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MultithreadingSearch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -796,10 +807,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="302">
+            <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/NumberOfDuplicates.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ReverseWordsInAString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="42" lean-forward="true" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DijkstrasShortestPath.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="34" />
+        <state relative-caret-position="189">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#839#840#0" expanded="true" />
@@ -823,16 +861,6 @@
             <element signature="e#1600#1601#0" expanded="true" />
             <element signature="e#1640#1641#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1395">
-            <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
