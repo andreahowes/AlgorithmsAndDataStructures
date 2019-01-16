@@ -1,7 +1,4 @@
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class DijkstrasShortestPath {
     public static void main(String[] args) {
@@ -32,8 +29,9 @@ public class DijkstrasShortestPath {
         HashSet<Vertex> nonPermanentVertices = new HashSet<>();
         nonPermanentVertices.add(vertexA);
         //while the hashmap of NonPerminent distances is greater than 0:
-        while(nonPermanentVertices.size()>0){
+        while(nonPermanentVertices.size()!=0){
             //set currentVertexAlgorithmIsOn to the vertex with shortest distance in NonPermanentDistances
+            //System.out.println(nonPermanentVertices);
             Vertex currentVertex = findSmallestDistanceFromNonPermanents(nonPermanentVertices);
             //then take currentVertex off nonPermanent list
             nonPermanentVertices.remove(currentVertex);
@@ -77,6 +75,10 @@ public class DijkstrasShortestPath {
         if(currentVertexDistance + currentNeighborDistance<currentNeighbor.getDistance()){
             currentNeighbor.setDistance(currentVertexDistance + currentNeighborDistance);
             //DO I NEED TO ADD CODE ABOUT CREATING THE SHORTEST PATH? OR IS THE NUMBER ENOUGH?
+            LinkedList<Vertex> shortestPath = new LinkedList<Vertex>(currentVertex.getNeighbors());
+            shortestPath.add(currentVertex);
+            currentNeighbor.setNeighbors(shortestPath);
+
         }
 
     }
@@ -116,6 +118,7 @@ class Vertex {
     private String name;
     //vertex needs a int to keep track of distance- automatically set to Max Int first
     private Integer distance;
+    private List<Vertex> neighbors = new LinkedList<>();
     //each vertex needs a hashmap of neighboring vertices and their distances
     private Map<Vertex, Integer> neighboringVertices = new HashMap<>();
 
@@ -138,6 +141,15 @@ class Vertex {
     }
 
     //getters, setters needed?
+
+    public List<Vertex> getNeighbors() {
+        return neighbors;
+    }
+
+    public void setNeighbors(List<Vertex> neighbors) {
+        this.neighbors = neighbors;
+    }
+
     public String getName() {
         return name;
     }
@@ -152,6 +164,14 @@ class Vertex {
 
     public void setDistance(Integer distance) {
         this.distance = distance;
+    }
+
+    @Override
+    public String toString() {
+        return "Vertex{" +
+                "name='" + name + '\'' +
+                ", distance=" + distance +'}';
+
     }
 }
 
