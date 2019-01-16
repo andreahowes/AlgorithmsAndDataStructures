@@ -1,6 +1,6 @@
-# Java Algorithms
+# Algorithms and Data Structures
 
-Repository for storing practice algorithms. 
+Repository for storing Java implemetations of popular algorithms and data structures. 
 
 
 ### Caesar.java
