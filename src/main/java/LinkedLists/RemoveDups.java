@@ -2,7 +2,7 @@ package LinkedLists;
 import java.util.HashSet;
 
 public class RemoveDups {
-    //Remove duplicates from an unsorted lined list.
+    //Remove duplicates from a linked list.
     public static void main(String[] args) {
         Node startNode = new Node(1);
         //adding to linkedList

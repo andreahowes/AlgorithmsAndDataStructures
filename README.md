@@ -95,3 +95,23 @@ Found = true
 Still in progress
 
 Utilizing OOP and HashSets to find the shortest path in a graph 
+
+
+###RemoveDups.java
+
+Algorithm for removing duplicates from a linked list.
+```
+ Node startNode = new Node(1);
+ startNode.appendToTail(2);
+ startNode.appendToTail(3);
+ startNode.appendToTail(1);
+ startNode.appendToTail(2);
+ RemoveDups removeDups = new RemoveDups(); 
+ removeDups.remove(startNode);
+```
+results in 
+```
+1
+2
+3
+```
