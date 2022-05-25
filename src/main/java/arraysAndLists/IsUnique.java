@@ -1,14 +1,14 @@
 //test a string for duplicate letters
 
-package linkedLists;
+package arraysAndLists;
 
 public class IsUnique {
 
     public static void main(String args[]) {
-        String testString = "andre";
+        String testString = "andrea";
         System.out.print(isOnlyUniqueChars(testString));
     }
-
+    
     public static boolean isOnlyUniqueChars(String myString){
         boolean isUnique = true;
 
