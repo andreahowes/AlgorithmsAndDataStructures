@@ -11,20 +11,18 @@ public class GroupAnagrams {
     public static void main(String[] args) {
         String[] strs = {"eat","tea","tan","ate","nat","bat"};
         List<List<String>> results = groupAnagram(strs);
-        // System.out.println(results);
+        System.out.println(results);
     }
 
     private static List<List<String>> groupAnagram(String[] strs) {
 
         //create a hashmap that is first an array of 26 that represents how many times each letter is used
-        HashMap<int[], ArrayList<String>> answerHash = new HashMap<>();
+        HashMap<String, ArrayList<String>> answerHash = new HashMap<>();
         for (String word : strs) {
             //create array of 26 counting where in alphabet letters are
-            int[] strArray = createAlphabetArray(word);
-            // System.out.println(answerHash.get(strArray));
-            // System.out.println(word);
+            int[] strArrayWithPointer = createAlphabetArray(word);
+            String strArray = Arrays.toString(strArrayWithPointer);
             if(answerHash.containsKey(strArray)){ //if already one of the arrays
-                // System.out.println("Andrea");
                 ArrayList<String> listToUpdate = answerHash.get(strArray);
                 listToUpdate.add(word);
                 answerHash.put(strArray, listToUpdate);
@@ -33,15 +31,15 @@ public class GroupAnagrams {
                 ArrayList<String> newArray = new ArrayList<>();
                 newArray.add(word);
                 answerHash.put(strArray, newArray);
-                System.out.println(answerHash.get(strArray));
-                System.out.println("Why is this triggered?");
+                // System.out.println(answerHash.get(strArray));
+                // System.out.println("Why is this triggered?");
 
             }
         }
         
         //then return all the values from the hashmap in one array
         ArrayList<List<String>> answerToReturn = new ArrayList<>();
-        for (int[] wordArray : answerHash.keySet()) {
+        for (String wordArray : answerHash.keySet()) {
             answerToReturn.add(answerHash.get(wordArray));
         }
         return answerToReturn;
